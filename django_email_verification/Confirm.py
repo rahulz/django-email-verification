@@ -82,7 +82,7 @@ def sendConfirm_thread(email, token):
     server = SMTP(sender, port)
     server.starttls()
     server.login(address, password)
-    server.sendmail(sender, email, msg.as_string())
+    server.sendmail(address, email, msg.as_string())
     server.quit()
 
 
